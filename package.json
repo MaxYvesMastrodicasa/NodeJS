@@ -1,0 +1,18 @@
+{
+  "name": "b2-nodejs",
+  "version": "1.0.0",
+  "description": "NodeJs est un environnement d'execution permettant les actions, api, et appli. \r C'est un langage \"non-compilé\", il s'execute directement dans le navigateur ou l'environnement d'execution.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "lesson"
+  ],
+  "author": "Citrus",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
