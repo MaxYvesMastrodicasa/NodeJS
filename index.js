@@ -1,45 +1,19 @@
-/*
-console.log("Hello There");
+import {divide , add, greatest} from "./src/utils/math.js";
+import { dicoMode, letterizer, subVowels } from "./src/utils/litteral.js";
 
-const test = "hello World";
-let test2 = "Hello World"; // désigne l'opérateur d'assignation (affectation)
-var test3 = "Hello world"; //variable global
+const a = 45;
+const b = 42;  
+console.log("1. \n\r "+a+" + "+b+" = " + add(a,b)+"\n\r")
 
-let num = 6;
-num = 216567;
-num = "Hello World";
+const tableau = [1,45,23,98,16,4852,19,37];
+console.log("2. \n\r Le plus grand nombre du tableau suivant : \n\r"+ "tableau = "+tableau+"\n\r est : "+greatest(tableau)+"\n\r")
 
-let someBool = true;
-let nullValue = null;
-let someArray = [];
-let someObject = {
-    key: "value",
-    key2: "value2",
-}
+const sentence = "Je n'est pas de voyelle";
+console.log("3. \n\r La phrase suivante : "+sentence+"\n\r sans voyelles : "+subVowels(sentence)+"\n\r");
 
-console.log(someObject.key)
+const sortMe = ["bonjour", "avocat", "zèbre", "marche", "wagon"];
+console.log("4. \n\r La liste suivante sera triée par ordre alphabétique : \n\r Avant : "+sortMe+"\n\r Après : "+dicoMode(sortMe)+"\n\r");
 
-if (someBool){
-    console.log("someBool is true");
-}
+const userAnswer = 979;
+console.log("5.\n\r Un nombre est inscrit en dur, s'il ne vous plait pas changez le.. \n\r "+userAnswer+" : "+letterizer(userAnswer)+"\n\r");
 
-if (someObject.key === "value"){
-    console.log("key is value");
-}
-
-
-const fruits = ["mangue", "passion", "ananas", "goyave"];
-fruits.push("papaye");
-console.log(fruits);
-
-*/
-
-const ben = {
-    firstname: "Benjamin",
-    lastname: "Seixeiro",
-    age: "19",
-    isStudent: true,
-    hobbies: ["Fratelli","programming","Betclic"]
-}
-
-console.log(ben.firstname);
