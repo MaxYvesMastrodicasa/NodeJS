@@ -44,6 +44,14 @@ const auCarre = x => x * x;
 () => {}
 ```
 
+la fonction .map() à pour argument une autre focntion
+
+```bash
+
+map( ()=>{} )
+
+```
+
 #### Tableau
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
 ```bash
@@ -92,7 +100,7 @@ Avec const et let on ne peut pas déclaré 2 fois la même variable.
     - La syntaxe CommonJS (utilisé dans Node)
     - La syntaxe ES6+ (utilisés dans les navigateurs) on parle de format ESM (ECMAScript Modules)
 
-## TD 1
+## TD 1 Fonction
 1 Écrivez une fonction qui prend deux nombres comme arguments et renvoie leur somme.
 
 2 Écrivez une fonction qui prend un tableau de nombres et renvoie le plus grand nombre du tableau.
@@ -116,3 +124,24 @@ https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Ma
 
 10 Écrivez une fonction qui prend une chaîne de caractères et renvoie une nouvelle chaîne avec toutes les consonnes en majuscules.
 
+## TD2 Tableau
+
+1. Créez un tableau contenant les nombres de 1 à 10. Écrivez un programme qui affiche chaque élément du tableau à la console.
+
+2. Créez un tableau contenant les jours de la semaine. Écrivez un programme qui affiche le premier jour de la semaine à la console.
+
+3. Créez un tableau contenant les nombres pairs de 2 à 10. Écrivez un programme qui calcule la somme des nombres du tableau et l'affiche à la console.
+
+4. Créez un tableau contenant les noms de cinq fruits. Écrivez un programme qui ajoute un sixième fruit à la fin du tableau et affiche le tableau complet à la console.
+
+5. Créez un tableau contenant les notes de cinq étudiants. Écrivez un programme qui calcule la moyenne des notes et l'affiche à la console.
+
+6. Créez un tableau contenant des noms d'oiseaux. Écrivez un programme qui recherche si un nom spécifique d'oiseau est présent dans le tableau.
+
+7. Créez un tableau contenant des noms de pays. Écrivez un programme qui trie le tableau par ordre alphabétique et l'affiche à la console.
+
+8. Créez un tableau contenant les noms des mois de l'année. Écrivez un programme qui affiche le troisième élément du tableau.
+
+9. Créez un tableau contenant des nombres aléatoires. Écrivez un programme qui calcule la valeur minimale et la valeur maximale du tableau et les affiche à la console.
+
+10. Créez un tableau contenant des phrases. Écrivez un programme qui cherche la phrase la plus longue du tableau et l'affiche à la console.

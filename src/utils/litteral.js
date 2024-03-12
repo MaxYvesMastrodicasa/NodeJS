@@ -4,8 +4,7 @@ export const subVowels = (iAmString) => {
 };
 
 export const dicoMode = (arrayString) => {
-  const sortString = arrayString.sort();
-  return sortString;
+    return arrayString.sort();
 };
 
 export const getVowelUp = (phrase) => {
@@ -21,7 +20,11 @@ export const getConsonantUp = (phrase) => {
 }
 
 export const getNumberVowel = (phrase) => {
-  return phrase.split('').filter( c => "aeiouy".includes(c.toLowerCase())).length;
+  return phrase.split('').filter( v => "aeiouy".includes(v.toLowerCase())).length;
+}
+
+const getNumberVowel2 = (sentence) =>{
+  return sentence.match(/[aeiouy]/gi).length;
 }
 
 export const letterizer = (numberletter) => {
