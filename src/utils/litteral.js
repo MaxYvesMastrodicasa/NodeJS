@@ -8,6 +8,22 @@ export const dicoMode = (arrayString) => {
   return sortString;
 };
 
+export const getVowelUp = (phrase) => {
+    return phrase.replace(/[aeiouy]/g,function(upper){
+      return upper.toUpperCase();
+    });
+}
+
+export const getConsonantUp = (phrase) => {
+  return phrase.toUpperCase().replace(/[AEIOUY]/gi,function(lower){
+    return lower.toLowerCase();
+  });
+}
+
+export const getNumberVowel = (phrase) => {
+  return phrase.split('').filter( c => "aeiouy".includes(c.toLowerCase())).length;
+}
+
 export const letterizer = (numberletter) => {
   if (isNaN(numberletter) || numberletter < 0 || 999 < numberletter) {
     return "Veuillez entrer un nombre entier entre 0 et 999 inclus.";
@@ -87,3 +103,4 @@ export const letterizer = (numberletter) => {
       hundredConverted + (hundredConverted && dozenConverted ? '-' : '') + dozenConverted + ((hundredConverted && unitConverted) || (dozenConverted && unitConverted) ? '-' : '') +unitConverted);
   }
 };
+
