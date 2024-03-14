@@ -100,6 +100,23 @@ Avec const et let on ne peut pas déclaré 2 fois la même variable.
     - La syntaxe CommonJS (utilisé dans Node)
     - La syntaxe ES6+ (utilisés dans les navigateurs) on parle de format ESM (ECMAScript Modules)
 
+un middlware est une fonction qui s'execute à chaque requete envoyer au serveur.
+Il prend 2 ou 3 arguments de type :
+```bash
+const middleware1(requete, reponse, next)
+``` 
+Exemple type :
+```bash
+app.use("/", (req, res, next) => {
+  console.log(req.toto);
+  next();
+});
+
+app.get("/", (req, res) => {
+  res.render("home", {});
+});
+```
+
 ## TD 1 Fonction
 1 Écrivez une fonction qui prend deux nombres comme arguments et renvoie leur somme.
 
