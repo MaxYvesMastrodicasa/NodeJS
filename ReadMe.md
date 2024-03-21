@@ -44,7 +44,7 @@ const auCarre = x => x * x;
 () => {}
 ```
 
-la fonction .map() à pour argument une autre focntion
+la fonction .map() à pour argument une autre fonction
 
 ```bash
 
@@ -100,7 +100,9 @@ Avec const et let on ne peut pas déclaré 2 fois la même variable.
     - La syntaxe CommonJS (utilisé dans Node)
     - La syntaxe ES6+ (utilisés dans les navigateurs) on parle de format ESM (ECMAScript Modules)
 
-un middlware est une fonction qui s'execute à chaque requete envoyer au serveur.
+les middleware et les routes permettent de récupérer les informations du serveurs (peut etre)
+
+un middleware est une fonction qui s'execute à chaque requete envoyer au serveur.
 Il prend 2 ou 3 arguments de type :
 ```bash
 const middleware1(requete, reponse, next)
@@ -116,6 +118,23 @@ app.get("/", (req, res) => {
   res.render("home", {});
 });
 ```
+
+### Async API
+Les opération asynchrone peuvent avoir 3 étoiles
+- pending (en cours)
+- resolved 
+- rejected
+
+exemple :
+```bash
+const res = fetch("https://swapi.dev/api/films/1/")
+```
+res est de type promise
+```bash
+.them((result)=> console.log(result))
+.catch((error)=> console.log(error))
+```
+
 
 ## TD 1 Fonction
 1 Écrivez une fonction qui prend deux nombres comme arguments et renvoie leur somme.
@@ -162,3 +181,22 @@ https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Ma
 9. Créez un tableau contenant des nombres aléatoires. Écrivez un programme qui calcule la valeur minimale et la valeur maximale du tableau et les affiche à la console.
 
 10. Créez un tableau contenant des phrases. Écrivez un programme qui cherche la phrase la plus longue du tableau et l'affiche à la console.
+
+
+## TP Serveur Web
+
+### Date limite de rendu : 22/03/2024 à 23h59
+#### Modalités de rendu 
+Une aplication Node/Express/EJS/BDD:
+
+- Un repository Git (GitHub, GitLab, Bitbucket, etc.) contenant le code source de l'application
+- Un dump de la base de données
+- un fichier README.md contenant les instructions pour installer et lancer l'application
+- Fonctionnalités attendues
+- Architecture MVC
+- Authentification (optionnel) : inscription, connexion, déconnexion, protection de routes avec middleware
+- CRUD (1 tables minimum) : CREATE READ UPDATE DELETE (si vous n'y arrivez pas, vous pouvez faire un CRUD sur un fichier JSON,ou js)
+- 2 ressources affichées dans des vues EJS
+
+Attention à la qualité du code (indentation, nommage, etc.)
+Attention à placer des commentatires au bon endroit 

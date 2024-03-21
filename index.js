@@ -3,9 +3,14 @@ import Express from "express";
 import shopRouter from "./src/routes/shop.js";
 import authRouter from "./src/routes/auth.js";
 import errorController from "./controllers/errors.js"
-
+import mysql from "mysql"
+import bodyParser from "body-parser";
 
 const app = Express();
+const portCom = process.env.portCom || 5000;
+
+app.use(Express.urlencoded({extended:true})); // vue pour connexion SQL Test
+app.listen(portCom, ()=>console.log("Écoute active sur le port "+portCom))
 
 // Configure mon application pour qu'elle utlise ejs comme moteur de templating
 // l'outil qui va generer de l'html

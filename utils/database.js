@@ -1,10 +1,9 @@
-const mysql = require("mysql2");
+import mysql from 'mysql2';
 
-const pool = mysql.createPool({
-  host: "localhost",
-  database: "node",
-  user: "root",
-  password: "example",
+const sqlPlug = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    database: 'tp_nodejs_siteweb',
 });
 
-module.exports = pool.promise();
+export default sqlPlug.promise();
