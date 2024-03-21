@@ -1,9 +1,10 @@
 import mysql from 'mysql2';
 
-const sqlPlug = mysql.createConnection({
+//création pool de connexion mysql
+const pool = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     database: 'tp_nodejs_siteweb',
 });
 
-export default sqlPlug.promise();
+export default pool.promise();
