@@ -1,3 +1,54 @@
+import db from "../utils/database.js";
+
+// CREATE
+export const createProduct = async (req, res) => {
+  try {
+    const { name, price } = req.body;
+    const [result] = await db.query('INSERT INTO products (name, price) VALUES (?, ?)', [name, price]);
+    res.status(201).json({ id: result.insertId, name, price });
+  } catch (error) {
+    console.error('Error creating product:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
+
+// READ
+export const getAllProducts = async (req, res) => {
+  try {
+    const [rows] = await db.query('SELECT * FROM products');
+    res.status(200).json(rows);
+  } catch (error) {
+    console.error('Error fetching products:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
+
+// UPDATE
+export const updateProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { name, price } = req.body;
+    await db.query('UPDATE products SET name = ?, price = ?, description = ?, imageURL = ? WHERE id = ?', [name, price,description,imageURL, id]);
+    res.status(200).json({ message: 'Product updated successfully' });
+  } catch (error) {
+    console.error('Error updating product:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
+
+// DELETE
+exports.deleteProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await db.query('DELETE FROM products WHERE id = ?', [id]);
+    res.status(200).json({ message: 'Product deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting product:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
+
+// Correction du prof
 // const Product = require('../models/product');
 
 // module.exports.postAddProduct = (req, res, next) => {
