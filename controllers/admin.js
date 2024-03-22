@@ -16,7 +16,7 @@ export const createProduct = async (req, res) => {
 export const getAllProducts = async (req, res) => {
   try {
     const [rows] = await db.query('SELECT * FROM products');
-    res.status(200).json(rows);
+    res.render('shop', { products: rows });
   } catch (error) {
     console.error('Error fetching products:', error);
     res.status(500).json({ error: 'Internal Server Error' });

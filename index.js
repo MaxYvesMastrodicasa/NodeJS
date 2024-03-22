@@ -5,6 +5,7 @@ import catcatRouter from "./src/routes/404.js";
 import signinRouter from "./src/routes/signin.js"; 
 import cartRouter from "./src/routes/cart.js";
 import adminRouter from "./src/routes/admin.js";
+import contactRouter from "./src/routes/contact.js"
 // import All from "./controllers/auth.js";
 
 const app = Express();
@@ -26,6 +27,7 @@ app.use("/shop", shopRouter);
 app.use("/signin", signinRouter);
 app.use("/404",catcatRouter);
 app.use("/cart",cartRouter);
+app.use("/contact",contactRouter);
 app.use("/admin",adminRouter);
 
 // app.get("/login", auth.renderLoginPage);
