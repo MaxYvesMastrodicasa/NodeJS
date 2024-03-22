@@ -1,8 +1,10 @@
 import path from "path";
-import Express from "express";
+import Express, { Router } from "express";
 import shopRouter from "./src/routes/shop.js";
-import authRouter from "./src/routes/auth.js";
-import errorController from "./controllers/404.js"
+import catcatRouter from "./src/routes/404.js";
+import loginRouter from "./src/routes/login.js"; 
+import cartRouter from "./src/routes/cart.js";
+import adminRouter from "./src/routes/admin.js"
 
 const app = Express();
 const portCom = process.env.portCom || 4000;
@@ -28,7 +30,10 @@ app.get("/", (req, res) => {
 app.use(Express.static("public"));
 
 app.use("/shop", shopRouter);
-app.use("/auth", authRouter);
+app.use("/login", loginRouter);
+app.use("/404",catcatRouter);
+app.use("/cart",cartRouter);
+app.use("/admin",adminRouter);
 
 app.listen(portCom, () => {
   console.log("Server is running on port "+ portCom);

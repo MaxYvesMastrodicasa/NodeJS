@@ -1,5 +1,5 @@
-export const get404 = (request, response, next) => {
-    response.render('404/index', { 
+export const get404 = (req, res, next) => {
+    res.render('404', { 
         pageTitle: 'Page Not Found', 
         path: '/'});
 };

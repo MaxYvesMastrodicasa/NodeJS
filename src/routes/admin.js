@@ -3,8 +3,8 @@ import Express from "express";
 const router = Express.Router();
 
 
-router.get("/signin",(req,res) => {
-    res.render("signin",{});
+router.get("/admin",(req,res) => {
+    res.render("admin",{});
 });
 
 export default router;
